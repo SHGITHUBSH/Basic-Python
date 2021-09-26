@@ -1,0 +1,22 @@
+#read from outside file (r as read, r+ as read & write w as write, a as append)
+#read function
+Employee_File_Testing = open("Testing.txt","r")
+print(Employee_File_Testing.readable())
+print(Employee_File_Testing.read())
+Employee_File_Testing = open("Testing.txt","r")
+print(Employee_File_Testing.readline())
+Employee_File_Testing = open("Testing.txt","r")
+print(Employee_File_Testing.readlines()[2])
+Employee_File_Testing.close()
+print("\n")
+#append (append will save over the original file, so need to be careful whenever append something)
+Employee_File_Testing = open("Testing.txt","a")
+Employee_File_Testing.write("\nTobby - Accountant")
+Employee_File_Testing.close()
+print("\n")
+#Write, will write over and delate all the original file content, put "1" behind the original file name before appendix when
+#writing, will create another file after run the program
+Employee_File_Testing = open("Testing1.txt","w")
+Employee_File_Testing.write("\nKelly - Chef")
+Employee_File_Testing.close()
+print("\n")
